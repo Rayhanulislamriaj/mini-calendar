@@ -5,4 +5,11 @@ const year = document.getElementById('year');
 
 const today = new Date();
 
-console.log(today);
+const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+
+const allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November','December'];
+
+date.innerHTML = (today.getDate() < 10 ? '0':'' ) + today.getDate();
+day.innerHTML =  weekDays[today.getDay()];       // today.getDay()
+month.innerHTML = allMonths[today.getMonth()];  // today.getMonth()
+year.innerHTML = today.getFullYear();
